@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>40629674-b675-487a-8a37-52e39e0fe5d3</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Remote Desktop</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Remote_Desktop\My\MyApplication.cs" />
+    <Compile Include="Remote_Desktop\My\MyComputer.cs" />
+    <Compile Include="Remote_Desktop\My\MyProject.cs" />
+    <Compile Include="Remote_Desktop\Form1.cs" />
+    <Compile Include="Remote_Desktop\Form2.cs" />
+    <Compile Include="Remote_Desktop\Form3.cs" />
+    <Compile Include="Remote_Desktop\Form4.cs" />
+    <Compile Include="Remote_Desktop\My\Resources\Resources.cs" />
+    <Compile Include="Remote_Desktop\My\MySettings.cs" />
+    <EmbeddedResource Include="Remote_Desktop.Form2.resources" />
+    <EmbeddedResource Include="Remote_Desktop.Form1.resources" />
+    <EmbeddedResource Include="Remote_Desktop.Form4.resources" />
+    <EmbeddedResource Include="Remote_Desktop.Resources.resources" />
+    <EmbeddedResource Include="Remote_Desktop.Form3.resources" />
+  </ItemGroup>
+</Project>
